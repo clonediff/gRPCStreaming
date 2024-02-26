@@ -18,6 +18,8 @@
 
     <ItemGroup>
         <Protobuf Include="Protos\openMeteo.proto" GrpcServices="Client" />
+        <Protobuf Include="Protos\jwt.proto" GrpcServices="Client" />
+        <Protobuf Include="Protos\private.proto" GrpcServices="Client" />
     </ItemGroup>
 
 </Project>

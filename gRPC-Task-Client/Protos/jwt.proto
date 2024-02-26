@@ -1,0 +1,18 @@
+﻿syntax = "proto3";
+
+option csharp_namespace = "gRPC_Task";
+
+package jwt;
+
+service Jwt {
+  rpc GetJwt (LoginDto) returns (JwtResponse);
+}
+
+message LoginDto {
+  string Username = 1;
+  string Password = 2;
+}
+
+message JwtResponse {
+  string Result = 1;
+}

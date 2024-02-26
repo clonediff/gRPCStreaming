@@ -1,0 +1,15 @@
+﻿syntax = "proto3";
+
+option csharp_namespace = "gRPC_Task";
+
+package private;
+
+service Secret {
+  rpc GetSecret (SecretDto) returns (SecretResponse);
+}
+
+message SecretDto { }
+
+message SecretResponse {
+  string Result = 1;
+}

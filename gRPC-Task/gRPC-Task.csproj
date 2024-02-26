@@ -8,14 +8,15 @@
 
     <ItemGroup>
         <Protobuf Include="Protos\openMeteo.proto" GrpcServices="Server" />
+        <Protobuf Include="Protos\jwt.proto" GrpcServices="Server" />
+        <Protobuf Include="Protos\private.proto" GrpcServices="Server" />
     </ItemGroup>
 
     <ItemGroup>
         <PackageReference Include="Grpc.AspNetCore" Version="2.57.0"/>
-    </ItemGroup>
-
-    <ItemGroup>
-      <ProjectReference Include="..\gRPC-Task-Client\gRPC-Task-Client.csproj" />
+        <PackageReference Include="Microsoft.AspNetCore.Authentication.JwtBearer" Version="8.0.0" />
+        <PackageReference Include="Microsoft.IdentityModel.Tokens" Version="7.4.0-preview1" />
+        <PackageReference Include="System.IdentityModel.Tokens.Jwt" Version="7.4.0-preview1" />
     </ItemGroup>
 
 </Project>
