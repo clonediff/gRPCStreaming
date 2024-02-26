@@ -1,0 +1,19 @@
+syntax = "proto3";
+
+import "google/protobuf/timestamp.proto";
+
+option csharp_namespace = "gRPC_Task";
+
+package openMeteo;
+
+service OpenMeteo {
+  rpc SendForecastStream (ForecastRequest) returns (stream ForecastResponse);
+  rpc SendForecast (ForecastRequest) returns (ForecastResponse);
+}
+
+message ForecastRequest { }
+
+message ForecastResponse {
+  google.protobuf.Timestamp date = 1;
+  double temperature = 2;
+}
